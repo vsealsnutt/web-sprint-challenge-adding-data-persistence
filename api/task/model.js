@@ -9,7 +9,8 @@ async function getTasks() {
     for (let i = 0; i < tasks.length; i++) {
         let resp = {
             task_id: tasks[i].project_id,
-            task_description: tasks[i].project_description,
+            task_description: tasks[i].task_description,
+            task_notes: tasks[i].task_notes,
             task_completed: tasks[i].task_completed === 0 ? false : true,
             project_name: tasks[i].project_name,
             project_description: tasks[i].project_description
